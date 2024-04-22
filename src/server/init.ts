@@ -7,8 +7,18 @@ export const router = t.router
 export const publicProcedure = t.procedure
 
 const checkAuth = t.middleware(async (opts) => {
+  const auth = opts.ctx.locals?.auth()
+  const currentUser = await opts.ctx.locals?.currentUser()
+
+  if (!auth?.userId || !currentUser?.id) {
+    throw new TRPCError({ code: "UNAUTHORIZED" })
+  }
+
   return opts.next({
-    ctx: {},
+    ctx: {
+      auth,
+      currentUser,
+    },
   })
 })
 

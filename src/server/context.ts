@@ -3,19 +3,20 @@ import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch"
 
 interface CreateInnerContextOptions
   extends Partial<FetchCreateContextFnOptions> {
-  session: null
+  locals: App.Locals
 }
 
 export async function createContextInner(opts?: CreateInnerContextOptions) {
   return {
-    session: opts?.session,
+    locals: opts?.locals,
   }
 }
 
-export async function createContext(opts: FetchCreateContextFnOptions) {
-  const session = null
-
-  const contextInner = await createContextInner({ session })
+export async function createContext(
+  _: FetchCreateContextFnOptions,
+  locals: App.Locals,
+) {
+  const contextInner = await createContextInner({ locals })
 
   return {
     ...contextInner,

@@ -1,11 +1,7 @@
-import { publicProcedure, router } from "../init"
+import { privateProcedure, router } from "../init"
 
 export default router({
-  public: publicProcedure.query(async () => {
-    await new Promise<boolean>((res) => setTimeout(() => res(true), 1000))
-    return "Hello from server!"
+  public: privateProcedure.query(async ({ ctx }) => {
+    return ctx.auth.userId
   }),
-  // private: privateProcedure.query(({ ctx }) => {
-  //   return `Hello ${ctx.session ?? "Jhon"}`
-  // }),
 })
