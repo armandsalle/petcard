@@ -1,0 +1,19 @@
+{
+  "semi": false,
+  "singleQuote": false,
+  "plugins": [
+    "prettier-plugin-astro",
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
+}
