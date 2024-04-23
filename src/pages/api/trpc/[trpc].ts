@@ -1,4 +1,4 @@
-import { appRouter, createContext } from "../../../server"
+import { appRouter, createContext } from "@server/index"
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch"
 import type { APIRoute } from "astro"
 

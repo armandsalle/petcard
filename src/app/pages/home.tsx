@@ -1,6 +1,6 @@
-import { trpc } from "./helpers/trpc"
+import { trpc } from "@app/helpers/trpc"
 
-export function Test() {
+export function Home() {
   const userQuery = trpc.example.public.useQuery(undefined, {
     retry: false,
   })

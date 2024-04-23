@@ -1,4 +1,4 @@
-import type { IAppRouter } from "../../server/routers"
+import type { IAppRouter } from "@server/routers"
 import {
   createTRPCReact,
   type inferReactQueryProcedureOptions,

@@ -1,5 +1,5 @@
-import { router } from "../init"
 import example from "./example"
+import { router } from "@server/init"
 
 export const appRouter = router({
   example,

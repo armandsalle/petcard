@@ -1,10 +1,10 @@
-import { AuthLayout } from "./authLayout"
-import { Test } from "./test"
+import { RootLayout } from "@app/layouts/root-layout"
+import { Home } from "@app/pages/home"
 import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
   {
-    element: <AuthLayout />,
-    children: [{ path: "/", element: <Test /> }],
+    element: <RootLayout />,
+    children: [{ path: "/", element: <Home /> }],
   },
 ])

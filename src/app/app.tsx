@@ -1,5 +1,5 @@
-import { trpc } from "./helpers/trpc"
-import { router } from "./router"
+import { trpc } from "@app/helpers/trpc"
+import { router } from "@app/router"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { httpBatchLink } from "@trpc/client"
 import { useState } from "react"
