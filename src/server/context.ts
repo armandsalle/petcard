@@ -1,4 +1,4 @@
-import type { inferAsyncReturnType } from "@trpc/server"
+import { db } from "./db"
 import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch"
 
 interface CreateInnerContextOptions
@@ -9,6 +9,7 @@ interface CreateInnerContextOptions
 export async function createContextInner(opts?: CreateInnerContextOptions) {
   return {
     locals: opts?.locals,
+    db,
   }
 }
 
@@ -23,4 +24,4 @@ export async function createContext(
   }
 }
 
-export type Context = inferAsyncReturnType<typeof createContextInner>
+export type Context = Awaited<ReturnType<typeof createContextInner>>

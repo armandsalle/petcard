@@ -1,0 +1,11 @@
+---
+import { App } from "@app/app"
+import Layout from "@/layouts/Layout.astro"
+import { ClerkLayout } from "astro-clerk-auth/components/control"
+---
+
+<ClerkLayout>
+  <Layout title="Petcard">
+    <App client:only />
+  </Layout>
+</ClerkLayout>

@@ -1,0 +1,8 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lassnames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"
+    ],
+    ":\\s*?[\"'`]([^\"'`]*).*?,"
+  ]
+}
