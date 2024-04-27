@@ -1,4 +1,3 @@
-import { faker } from "@faker-js/faker"
 import { products } from "@server/db/schema"
 import { privateProcedure, router } from "@server/init"
 import { eq } from "drizzle-orm"
@@ -38,9 +37,9 @@ export default router({
     )
     .mutation(async ({ ctx, input }) => {
       const db = await ctx.db.insert(products).values({
-        description: input.description, //faker.commerce.productDescription(),
-        name: input.name, //faker.commerce.productName(),
-        price: input.price, //Number(faker.commerce.price()),
+        description: input.description,
+        name: input.name,
+        price: input.price,
       })
 
       return db
