@@ -1,11 +1,21 @@
 ---
 import { App } from "@app/app"
-import Layout from "@/layouts/Layout.astro"
+
 import { ClerkLayout } from "astro-clerk-auth/components/control"
 ---
 
 <ClerkLayout>
-  <Layout title="Petcard">
-    <App client:only />
-  </Layout>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Astro description" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="generator" content={Astro.generator} />
+      <title>Petcard</title>
+    </head>
+    <body>
+      <App client:only />
+    </body>
+  </html>
 </ClerkLayout>
