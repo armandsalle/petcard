@@ -1,6 +1,5 @@
 ---
 import { App } from "@app/app"
-
 import { ClerkLayout } from "astro-clerk-auth/components/control"
 ---
 
@@ -15,7 +14,7 @@ import { ClerkLayout } from "astro-clerk-auth/components/control"
       <title>Petcard</title>
     </head>
     <body>
-      <App client:only />
+      <App client:only="react" />
     </body>
   </html>
 </ClerkLayout>

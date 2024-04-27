@@ -10,7 +10,8 @@
     "astro": "astro",
     "db:push": "dotenv drizzle-kit push:pg --config drizzle.config.ts",
     "db:studio": "dotenv drizzle-kit studio",
-    "db:generate": "dotenv drizzle-kit generate:pg --config drizzle.config.ts"
+    "db:generate": "dotenv drizzle-kit generate:pg --config drizzle.config.ts",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
