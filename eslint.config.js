@@ -45,6 +45,8 @@ export default [
   },
   {
     files: ["**/*.{ts,tsx,js}"],
-    ignores: ["node_modules", "build", "out"],
+  },
+  {
+    ignores: ["node_modules/**/*", "build/**/*", "out/**/*", ".vercel/**/*"],
   },
 ]
