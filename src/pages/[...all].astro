@@ -1,20 +1,22 @@
 ---
 import { App } from "@app/app"
 import { ClerkLayout } from "astro-clerk-auth/components/control"
+import "@app/styles/index.css"
 ---
 
-<ClerkLayout>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="description" content="Astro description" />
-      <meta name="viewport" content="width=device-width" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <meta name="generator" content={Astro.generator} />
-      <title>Petcard</title>
-    </head>
-    <body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Petcard</title>
+  </head>
+
+  <body>
+    <ClerkLayout>
       <App client:only="react" />
-    </body>
-  </html>
-</ClerkLayout>
+    </ClerkLayout>
+  </body>
+</html>

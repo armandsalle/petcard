@@ -14,12 +14,14 @@ export default defineConfig({
     },
   },
   integrations: [
-    react({}),
-    tailwind(),
+    react(),
     clerk({
       afterSignInUrl: "/",
       afterSignUpUrl: "/",
       afterSignOutUrl: "/",
+    }),
+    tailwind({
+      applyBaseStyles: false,
     }),
   ],
 })

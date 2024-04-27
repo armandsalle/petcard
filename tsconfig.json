@@ -10,6 +10,7 @@
       "@app/helpers/*": ["src/app/helpers/*"],
       "@app/pages/*": ["src/app/pages/*"],
       "@app/layouts/*": ["src/app/layouts/*"],
+      "@app/styles/*": ["src/app/styles/*"],
       "@app/*": ["src/app/*"],
       "@server/*": ["src/server/*"],
       "@server/routers/*": ["src/server/routers/*"],
