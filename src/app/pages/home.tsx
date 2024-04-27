@@ -121,7 +121,7 @@ function Item({
 }: ItemProps) {
   return (
     <li className={className}>
-      <div className="border-r py-2	pl-4 pr-2 tabular-nums">{product.id}</div>
+      <div className="border-r py-2 pl-4 pr-2 tabular-nums">{product.id}</div>
       <div className="py-2 pl-2 pr-4">{product.name}</div>
       {isPending ? <LoadingLink /> : <ItemLink id={product.id} />}
       {isDeleting ? (
@@ -203,7 +203,7 @@ export function Home() {
       ) : (
         <ul className="rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900">
           <li className={itemStyles.first}>
-            <div className="border-r py-2	pl-4 pr-2 tabular-nums">--</div>
+            <div className="border-r py-2 pl-4 pr-2 tabular-nums">--</div>
             <div className="py-2 pl-2 pr-4 text-gray-500">Loading...</div>
           </li>
         </ul>
