@@ -11,7 +11,7 @@ export function Nav() {
           <>
             <SignedOut>
               <a
-                className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                className="flex h-8 items-center justify-center rounded bg-blue-500 px-4 text-white hover:bg-blue-600"
                 href="https://chief-egret-65.accounts.dev/sign-in"
               >
                 Sign In
@@ -25,13 +25,17 @@ export function Nav() {
                     userButtonOuterIdentifier: {
                       fontSize: "1rem",
                     },
+                    userButtonAvatarBox: {
+                      width: "2rem",
+                      height: "2rem",
+                    },
                   },
                 }}
               />
             </SignedIn>
           </>
         ) : (
-          "loading"
+          <div className="h-8">loading</div>
         )}
       </div>
     </header>
