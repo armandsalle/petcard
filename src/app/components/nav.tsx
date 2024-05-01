@@ -4,7 +4,7 @@ export function Nav() {
   const { isLoaded } = useUser()
 
   return (
-    <header className="flex items-center justify-between bg-gray-200 px-8 py-4">
+    <header className="flex h-16 items-center justify-between bg-gray-200 px-8 py-4">
       <div>Pet card</div>
       <div>
         {isLoaded ? (

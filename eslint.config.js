@@ -34,6 +34,10 @@ export default [
       "@typescript-eslint/consistent-type-definitions": "off",
       "multiline-ternary": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-misused-promises": "off",
+      indent: "off",
+      "@typescript-eslint/indent": "off",
+      "@typescript-eslint/no-confusing-void-expression": "off",
     },
   },
   {

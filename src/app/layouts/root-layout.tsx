@@ -12,7 +12,7 @@ export function RootLayout() {
   return (
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <Nav />
-      <main>
+      <main className="container px-2 md:px-4">
         <Outlet />
       </main>
     </ClerkProvider>

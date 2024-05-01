@@ -1,9 +1,10 @@
 import { trpc } from "@app/helpers/trpc"
 import { router } from "@app/router"
+import { Toaster } from "@app/ui/sonner"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { httpBatchLink } from "@trpc/client"
 import { createTRPCQueryUtils } from "@trpc/react-query"
-import { useState } from "react"
+import { StrictMode, useState } from "react"
 import { RouterProvider } from "react-router-dom"
 
 const _queryClient = new QueryClient({
@@ -33,10 +34,13 @@ export function App() {
   const [trpcClient] = useState(() => _trpcClient)
 
   return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>
-    </trpc.Provider>
+    <StrictMode>
+      <trpc.Provider client={trpcClient} queryClient={queryClient}>
+        <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router} />
+        </QueryClientProvider>
+      </trpc.Provider>
+      <Toaster position="top-right" />
+    </StrictMode>
   )
 }
